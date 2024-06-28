@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.button.MaterialButtonToggleGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:singleSelection="true"
+    android:orientation="horizontal"
+    android:spacing="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.App.Button.OutlinedButton.UpvoteButton"
+        android:id="@+id/tip_detail_upvote_btn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/keyboard_arrow_up_24px"
+        android:text="Upvote"
+        android:contentDescription="Upvote"/>
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.App.Button.OutlinedButton.DownvoteButton"
+        android:id="@+id/tip_detail_downvote_btn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/keyboard_arrow_down_24px"
+        android:text="Downvote"
+        android:contentDescription="Downvote"/>
+</com.google.android.material.button.MaterialButtonToggleGroup>

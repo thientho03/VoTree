@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/pickUp_rb"
+                style="@style/Widget.Material3.CompoundButton.RadioButton"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:id="@+id/productImage_iv"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/productName_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Product Name"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textColor="@color/black"
+                    android:maxLines="1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/productPrice_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="$ 2.500.000"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="@color/md_theme_primary"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/sub_btn"
+                        style="@style/Widget.Material3.Button.IconButton.Outlined"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        app:iconTint="@color/black"
+                        app:cornerRadius="5dp"
+                        app:icon="@drawable/ic_subtract"
+                        app:strokeWidth="2dp"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:boxStrokeWidth="0dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/quantity_et"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:padding="0dp"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="0dp"
+                            android:text="999"
+                            android:textAlignment="gravity"
+                            android:textStyle="bold" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/add_btn"
+                        style="@style/Widget.Material3.Button.IconButton.Outlined"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="5dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+                        app:cornerRadius="5dp"
+                        app:icon="@drawable/baseline_add_24"
+                        app:iconTint="@color/black"
+                        app:strokeWidth="2dp"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <!--                <Button-->
+                <!--                    android:id="@+id/favorite_btn"-->
+                <!--                    style="@style/Widget.Material3.Button.IconButton.Outlined"-->
+                <!--                    android:layout_width="40dp"-->
+                <!--                    android:layout_height="40dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    app:cornerRadius="5dp"-->
+                <!--                    app:strokeWidth="2dp"-->
+                <!--                    app:icon="@drawable/bookmark_border_24px"-->
+                <!--                    app:iconGravity="textEnd" />-->
+
+                <Button
+                    android:id="@+id/remove_btn"
+                    style="@style/Widget.Material3.Button.IconButton.Outlined"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    app:cornerRadius="5dp"
+                    app:icon="@drawable/delete_24px"
+                    app:iconGravity="textEnd"
+                    app:strokeWidth="2dp"
+                    app:iconPadding="0dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

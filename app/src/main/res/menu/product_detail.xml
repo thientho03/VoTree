@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/productDetail_to_StoreReport"
+        android:title="Report Store"
+        android:icon="@drawable/report_24px"
+        />
+    <item
+        android:id="@+id/productDetail_to_ProductReport"
+        android:title="Report Product"
+        android:icon="@drawable/report_24px"
+        />
+</menu>

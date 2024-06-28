@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tip_row_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_theme_onPrimary"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/tip_list_item_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackground"
+        android:minHeight="64dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            app:shapeAppearanceOverlay="@style/square_overlay"
+            android:id="@+id/tip_list_item_avatar"
+            android:scaleType="centerCrop"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:padding="16dp"
+            app:srcCompat="@drawable/shape_avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tip_list_item_avatar"
+            android:layout_toStartOf="@id/tip_item_icon"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tip_list_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:paddingTop="17dp"
+                android:text="@string/lorem_ipsum"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/md_theme_onSurface"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tip_list_item_short_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="@string/lorem_ipsum"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/md_theme_onSurface" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/tip_item_icon"
+            android:layout_width="58dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_arrow_right_24"
+            android:layout_marginEnd="24dp"
+            android:contentDescription="@string/this_is_icon_for_illustration" />
+    </RelativeLayout>
+</LinearLayout>

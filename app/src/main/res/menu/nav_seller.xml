@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/productList"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/storeManagement2"
+        android:enabled="true"
+        android:icon="@drawable/potted_plant_24px"
+        android:title="Your Store"
+        />
+    <item
+        android:id="@+id/main_tip_fragment"
+        android:enabled="true"
+        android:icon="@drawable/plant_tip"
+        android:title="Tips"
+        />
+    <item
+        android:id="@+id/notifications_fragment"
+        android:enabled="true"
+        android:icon="@drawable/notifications_24px"
+        android:title="Notifications"
+        />
+    <item
+        android:id="@+id/user_profile_fragment"
+        android:enabled="true"
+        android:icon="@drawable/person_24px"
+        android:title="Your Profile"
+        />
+</menu>

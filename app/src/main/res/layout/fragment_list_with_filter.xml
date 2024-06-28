@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_onPrimary"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <HorizontalScrollView
+            android:id='@+id/horizontalScrollView'
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="ExtraText">
+
+                <Button
+                    android:id="@+id/allButton"
+                    style="@style/Widget.Material3.Button.IconButton.Filled"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/md_theme_onPrimary"
+                    android:text="All"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/option2_2"
+                    app:strokeColor="@color/colorPrimaryDark"
+                    app:strokeWidth="2dp"
+                    app:cornerRadius="5dp" />
+
+                <Button
+                    android:id="@+id/pendingButton"
+                    style="@style/Widget.Material3.Button.IconButton.Filled"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/md_theme_onPrimary"
+                    android:textColor="@color/yellow"
+                    android:text="Pending"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toTopOf="@+id/saveButton"
+                    app:strokeColor="@color/yellow"
+                    app:strokeWidth="2dp"
+                    app:cornerRadius="5dp" />
+
+                <Button
+                    android:id="@+id/userButton"
+                    style="@style/Widget.Material3.Button.IconButton.Filled"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/md_theme_onPrimary"
+                    android:textColor="@color/md_theme_primary"
+                    android:text="User"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toTopOf="@+id/saveButton"
+                    app:strokeColor="@color/md_theme_primary"
+                    app:strokeWidth="2dp"
+                    app:cornerRadius="5dp" />
+
+                <Button
+                    android:id="@+id/approvedButton"
+                    style="@style/Widget.Material3.Button.IconButton.Filled"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/md_theme_onPrimary"
+                    android:textColor="@color/md_theme_primary"
+                    android:text="Approved"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toTopOf="@+id/saveButton"
+                    app:strokeColor="@color/md_theme_primary"
+                    app:strokeWidth="2dp"
+                    app:cornerRadius="5dp" />
+
+                <Button
+                    android:id="@+id/rejectedButton"
+                    style="@style/Widget.Material3.Button.IconButton.Filled"
+                    android:layout_width="115dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/md_theme_onPrimary"
+                    android:textColor="@color/md_theme_error"
+                    android:text="Rejected"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="40dp"
+                    app:layout_constraintBottom_toTopOf="@+id/saveButton"
+                    app:strokeColor="@color/md_theme_error"
+                    app:strokeWidth="2dp"
+                    app:cornerRadius="5dp" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listRecycleView"
+            android:layout_marginTop="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

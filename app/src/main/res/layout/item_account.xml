@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/account_row_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_theme_onPrimary"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:id="@+id/account_list_item_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackground"
+        android:minHeight="64dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            app:shapeAppearanceOverlay="@style/circle_overlay"
+            android:id="@+id/account_list_item_avatar"
+            android:scaleType="centerCrop"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:padding="16dp"
+            app:srcCompat="@drawable/shape_avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/account_list_item_avatar"
+            android:layout_toStartOf="@id/list_item_icon"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/account_list_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/account_list_item_avatar"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:paddingTop="17dp"
+                android:text="@string/lorem_ipsum"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/md_theme_onSurface"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/account_list_item_name"
+                android:layout_toEndOf="@id/account_list_item_avatar"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/accountRoleIcon"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="7dp"
+                    android:src="@drawable/icon_dot"
+                    android:layout_marginStart="5dp"
+                    android:contentDescription="@string/this_is_icon_for_illustration"
+                    app:layout_constraintTop_toBottomOf="@+id/tipImage"
+                    app:tint="@color/md_theme_onPrimaryContainer"/>
+
+                <TextView
+                    android:id="@+id/account_list_item_role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="@string/lorem_ipsum"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@color/md_theme_onSurface"
+                    android:textAllCaps="true"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/list_item_icon"
+            android:layout_width="58dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_arrow_right_24"
+            android:layout_marginEnd="24dp"
+            android:contentDescription="@string/this_is_icon_for_illustration" />
+
+    </RelativeLayout>
+
+</LinearLayout>

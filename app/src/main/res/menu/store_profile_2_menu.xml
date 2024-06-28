@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/storeProfile2_to_StoreReport" android:title="Report Store" android:tooltipText="Is there any problem?" android:icon="@drawable/report_24px" />
+</menu>

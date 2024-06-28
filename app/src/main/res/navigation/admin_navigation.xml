@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_navigation"
+    app:startDestination="@id/tipListFragment">
+
+    <fragment
+        android:id="@+id/tipListFragment"
+        android:name="com.example.votree.admin.list.TipsFragment"
+        android:label="fragment_tips"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_tipsFragment_to_tipDetailFragment2"
+            app:destination="@id/tipDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tipDetailFragment"
+        android:name="com.example.votree.admin.fragments.TipDetailFragmentAdmin"
+        android:label="fragment_tip_detail"
+        tools:layout="@layout/fragment_tip_detail_admin" >
+        <action
+            android:id="@+id/action_tipDetailFragment2_to_tipsFragment"
+            app:destination="@id/tipListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountListFragment"
+        android:name="com.example.votree.admin.list.AccountListFragment"
+        android:label="fragment_account_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_accountListFragment_to_accountDetailFragment"
+            app:destination="@id/accountDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountDetailFragment"
+        android:name="com.example.votree.admin.fragments.AccountDetailFragment"
+        android:label="fragment_account_detail"
+        tools:layout="@layout/fragment_account_detail" >
+        <action
+            android:id="@+id/action_accountDetailFragment_to_accountListFragment"
+            app:destination="@id/accountListFragment" />
+    </fragment>
+
+</navigation>

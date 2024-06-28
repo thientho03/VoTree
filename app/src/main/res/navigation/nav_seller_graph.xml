@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/productList"
+    android:id="@+id/nav_seller_graph">
+
+    <fragment
+        android:id="@+id/main_tip_fragment"
+        android:name="com.example.votree.tips.TipMainScreenFragment"
+        android:label="Tips Main Screen"
+        tools:layout="@layout/fragment_tip_main_screen" >
+        <action
+            android:id="@+id/action_main_tip_fragment_to_tipDetailFragment2"
+            app:destination="@id/tipDetailFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productList"
+        android:name="com.example.votree.products.fragments.ProductList"
+        android:label="List"
+        tools:layout="@layout/fragment_product_list">
+        <action
+            android:id="@+id/action_productList_to_productDetail"
+            app:destination="@id/productDetail" />
+        <action
+            android:id="@+id/action_productList_to_cartList"
+            app:destination="@id/cartList" />
+        <action
+            android:id="@+id/action_productList_to_searchResultFragment"
+            app:destination="@id/searchResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetail"
+        android:name="com.example.votree.products.fragments.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail">
+        <argument
+            android:name="currentProduct"
+            app:argType="com.example.votree.products.models.Product" />
+        <argument
+            android:name="role"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_productDetail_to_checkout"
+            app:destination="@id/checkout" />
+        <action
+            android:id="@+id/action_productDetail_to_productReviewListFragment"
+            app:destination="@id/productReviewListFragment" />
+        <action
+            android:id="@+id/action_productDetail_to_storeProfile2"
+            app:destination="@id/storeProfile2"
+            app:enterAnim="@anim/fui_slide_in_right" />
+        <action
+            android:id="@+id/action_productDetail_to_store_report"
+            app:destination="@id/store_report" />
+        <action
+            android:id="@+id/action_productDetail_to_productReport"
+            app:destination="@id/productReport" />
+        <action
+            android:id="@+id/action_productDetail_to_cartList"
+            app:destination="@id/cartList" />
+    </fragment>
+    <fragment
+        android:id="@+id/notifications_fragment"
+        android:name="com.example.votree.notifications.fragments.NotificationFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notification"
+        >
+        <action
+            android:id="@+id/action_notifications_fragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/user_profile_fragment"
+        android:name="com.example.votree.users.fragments.UserProfileFragment"
+        android:label="User Profile"
+        tools:layout="@layout/fragment_user_profile"
+        >
+        <action
+            android:id="@+id/action_user_profile_fragment_to_userProfileSettingFragment"
+            app:destination="@id/userProfileSettingFragment" />
+        <action
+            android:id="@+id/action_user_profile_fragment_to_pointTransactionFragment"
+            app:destination="@id/pointTransactionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartList"
+        android:name="com.example.votree.products.fragments.CartList"
+        android:label="fragment_cart_list"
+        tools:layout="@layout/fragment_cart_list">
+        <action
+            android:id="@+id/action_cartList_to_checkout"
+            app:destination="@id/checkout" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkout"
+        android:name="com.example.votree.products.fragments.Checkout"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout">
+        <action
+            android:id="@+id/action_checkout_to_shippingAddressFragment"
+            app:destination="@id/shippingAddressFragment" />
+        <argument
+            android:name="cart"
+            app:argType="com.example.votree.products.models.Cart"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_checkout_to_checkoutResultFragment"
+            app:destination="@id/checkoutResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shippingAddressFragment"
+        android:name="com.example.votree.products.fragments.ShippingAddressFragment"
+        android:label="fragment_shipping_address"
+        tools:layout="@layout/fragment_shipping_address">
+        <action
+            android:id="@+id/action_shippingAddressFragment_to_checkout"
+            app:destination="@id/checkout" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/storeManagement2"
+        android:name="com.example.votree.users.fragments.StoreManagementFragment"
+        android:label="StoreManagement">
+        <action
+            android:id="@+id/action_storeManagement2_to_addNewProduct2"
+            app:destination="@id/addNewProduct2" />
+        <action
+            android:id="@+id/action_storeManagement2_to_productDetailFragmentForStore"
+            app:destination="@id/productDetailFragmentForStore" />
+        <action
+            android:id="@+id/action_storeManagement2_to_orderManagementForStoreFragment"
+            app:destination="@id/orderManagementForStoreFragment" />
+        <action
+            android:id="@+id/action_storeManagement2_to_revenueStatisticsFragment"
+            app:destination="@id/revenueStatisticsFragment" />
+        <action
+            android:id="@+id/action_storeManagement2_self"
+            app:destination="@id/storeManagement2" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewProduct2"
+        android:name="com.example.votree.products.fragments.AddNewProduct"
+        android:label="fragment_add_new_product"
+        tools:layout="@layout/fragment_add_new_product">
+        <action
+            android:id="@+id/action_addNewProduct2_to_storeManagement2"
+            app:destination="@id/storeManagement2" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProduct"
+        android:name="com.example.votree.products.fragments.UpdateProduct"
+        android:label="fragment_update_product"
+        tools:layout="@layout/fragment_update_product">
+        <argument
+            android:name="currentProduct"
+            app:argType="com.example.votree.products.models.Product" />
+        <action
+            android:id="@+id/action_updateProduct_to_productDetailFragmentForStore"
+            app:destination="@id/productDetailFragmentForStore" />
+        <action
+            android:id="@+id/action_updateProduct_to_storeManagement2"
+            app:destination="@id/storeManagement2" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragmentForStore"
+        android:name="com.example.votree.products.fragments.ProductDetailFragmentForStore"
+        android:label="ProductDetailFragmentForStore">
+        <action
+            android:id="@+id/action_productDetailFragmentForStore_to_updateProduct"
+            app:destination="@id/updateProduct" />
+        <action
+            android:id="@+id/action_productDetailFragmentForStore_to_storeManagement2"
+            app:destination="@id/storeManagement2" />
+        <argument
+            android:name="currentProduct"
+            app:argType="com.example.votree.products.models.Product" />
+        <action
+            android:id="@+id/action_productDetailFragmentForStore_to_storeProfile2"
+            app:destination="@id/storeProfile2" />
+    </fragment>
+    <fragment
+        android:id="@+id/productReviewListFragment"
+        android:name="com.example.votree.products.fragments.ProductReviewListFragment"
+        android:label="fragment_product_review_list"
+        tools:layout="@layout/fragment_product_review_list" >
+        <action
+            android:id="@+id/action_productReviewListFragment_to_productDetail"
+            app:destination="@id/productDetail" />
+        <argument
+            android:name="currentProduct"
+            app:argType="com.example.votree.products.models.Product" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileSettingFragment"
+        android:name="com.example.votree.users.fragments.UserProfileSettingFragment"
+        android:label="fragment_user_profile_setting"
+        tools:layout="@layout/fragment_user_profile_setting" >
+        <action
+            android:id="@+id/action_userProfileSettingFragment_to_user_profile_fragment"
+            app:destination="@id/user_profile_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeProfile2"
+        android:name="com.example.votree.users.fragments.StoreProfile2"
+        android:label="fragment_store_profile2"
+        tools:layout="@layout/fragment_store_profile2">
+        <argument
+            android:name="storeId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_storeProfile2_to_store_report"
+            app:destination="@id/store_report" />
+        <action
+            android:id="@+id/action_storeProfile2_to_productDetailFragmentForStore"
+            app:destination="@id/productDetailFragmentForStore" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.example.votree.products.fragments.SearchResultFragment"
+        android:label="fragment_search_result"
+        tools:layout="@layout/fragment_search_result" >
+        <argument
+            android:name="query"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_searchResultFragment_to_productDetail"
+            app:destination="@id/productDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/store_report"
+        android:name="com.example.votree.users.fragments.StoreReport"
+        android:label="fragment_store_report"
+        tools:layout="@layout/fragment_store_report" >
+        <argument
+            android:name="storeId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/productReport"
+        android:name="com.example.votree.products.fragments.ProductReport"
+        android:label="fragment_product_report"
+        tools:layout="@layout/fragment_product_report" >
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pointTransactionFragment"
+        android:name="com.example.votree.products.fragments.PointTransactionFragment"
+        android:label="fragment_point_transaction"
+        tools:layout="@layout/fragment_point_transaction">
+        <action
+            android:id="@+id/action_pointTransactionFragment_to_user_profile_fragment"
+            app:destination="@id/user_profile_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderManagementForStoreFragment"
+        android:name="com.example.votree.users.fragments.OrderManagementForStoreFragment"
+        android:label="fragment_order_management_for_store"
+        tools:layout="@layout/fragment_order_management_for_store">
+        <action
+            android:id="@+id/action_orderManagementForStoreFragment_to_storeManagement2"
+            app:destination="@id/storeManagement2" />
+        <action
+            android:id="@+id/action_orderManagementForStoreFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.example.votree.products.fragments.OrderDetailsFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details">
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_orderManagementForStoreFragment"
+            app:destination="@id/orderManagementForStoreFragment" />
+        <argument
+            android:name="transaction"
+            app:argType="com.example.votree.products.models.Transaction" />
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_notifications_fragment"
+            app:destination="@id/notifications_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutResultFragment"
+        android:name="com.example.votree.products.fragments.CheckoutResultFragment"
+        android:label="fragment_checkout_result"
+        tools:layout="@layout/fragment_checkout_result">
+        <action
+            android:id="@+id/action_checkoutResultFragment_to_checkout"
+            app:destination="@id/checkout" />
+        <argument
+            android:name="checkoutResult"
+            app:argType="boolean" />
+        <argument
+            android:name="points"
+            app:argType="integer" />
+        <argument
+            android:name="cart"
+            app:argType="com.example.votree.products.models.Cart"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_checkoutResultFragment_to_productList"
+            app:destination="@id/productList" />
+    </fragment>
+    <fragment
+        android:id="@+id/tipDetailFragment2"
+        android:name="com.example.votree.tips.TipDetailFragment"
+        android:label="TipDetailFragment" >
+        <argument
+            android:name="tipData"
+            app:argType="com.example.votree.tips.models.ProductTip" />
+        <action
+            android:id="@+id/action_tipDetailFragment2_to_storeProfile2"
+            app:destination="@id/storeProfile2"
+            app:enterAnim="@anim/fui_slide_in_right"
+            app:exitAnim="@anim/fui_slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/revenueStatisticsFragment"
+        android:name="com.example.votree.users.fragments.RevenueStatisticsFragment"
+        android:label="fragment_revenue_statistics"
+        tools:layout="@layout/fragment_revenue_statistics" />
+</navigation>

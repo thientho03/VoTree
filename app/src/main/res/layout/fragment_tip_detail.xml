@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/tip_detail_app_bar_layout"
+            android:layout_width="match_parent"
+            app:liftOnScroll="true"
+            app:liftOnScrollColor="@color/white"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            style="?attr/collapsingToolbarLayoutLargeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:foreground="@drawable/gradient_inverse"
+            app:contentScrim="@color/fui_transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <ImageView
+                android:id="@+id/tip_detail_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Tip image"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop" />
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/tip_detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/arrow_back_24px"
+                app:navigationIconTint="@color/black" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            app:layout_anchor="@id/tip_detail_app_bar_layout"
+            app:layout_anchorGravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_anchor="@id/tip_detail_app_bar_layout">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tip_detail_title_text_view"
+                    style="?attr/textAppearanceHeadlineMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="3"
+                    android:minLines="2"
+                    android:text="Celebrating The First Day of Spring With These Flowers"
+                    android:textColor="@color/md_theme_scrim" />
+
+                <ImageButton
+                    android:id="@+id/text_to_speech_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerCrop"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_speaker_idle" />
+
+            </LinearLayout>
+
+            <include
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tip_voting_system"
+                layout="@layout/tip_voting_system" />
+
+            <LinearLayout
+                android:clickable="true"
+                android:id="@+id/tip_detail_author_store_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/tip_detail_avatar_image_view"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="4dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/circle_overlay" />
+
+                <LinearLayout
+                    android:layout_marginStart="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tip_detail_author_text_view"
+                        style="?attr/textAppearanceTitleMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kha Huynh"
+                        android:textColor="?attr/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tip_detail_store_text_view"
+                        style="?attr/textAppearanceLabelMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BA_10 Store"
+                        android:textColor="?attr/colorSecondary" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tip_detail_date_text_view"
+                    style="?attr/textAppearanceLabelMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="April 1 2024  |  100 votes"
+                    android:textColor="@color/md_theme_scrim" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tip_detail_content_text_view"
+                style="?attr/textAppearanceBody1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineHeight="22sp"
+                android:text="Today marks the celebration of the first day of spring, a time when nature awakens with vibrant colors and fragrant blooms. As we welcome the warmth of the sun and the gentle breeze, let us take a moment to appreciate the beauty that surrounds us, particularly in the form of flowers.\nThe arrival of spring brings forth a kaleidoscope of blossoms, each with its own unique charm and significance. From the cheerful daffodils that herald the season's arrival to the delicate cherry blossoms that paint the landscape with hues of pink and white, there is a flower to enchant every heart.\nIn gardens and parks, on windowsills and balconies, these floral gems unfurl their petals, inviting us to revel in their splendor. They serve as a reminder of nature's resilience and the promise of renewal that spring brings.\nSo let us embrace this moment of rejuvenation and immerse ourselves in the beauty of these flowers. Let us celebrate the first day of spring with gratitude and joy, knowing that brighter days lie ahead."
+                android:textColor="@color/md_theme_scrim"
+                android:textIsSelectable="true" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                style="?attr/textAppearanceTitleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:color="?attr/colorOnSurfaceVariant"
+                android:text="Comments" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="12dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textField"
+                    style="?attr/textInputFilledStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Share your thought..."
+                    app:boxBackgroundColor="?attr/colorSurfaceContainerLow"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:hintTextAppearance="?attr/textAppearanceTitleSmall"
+                    app:hintTextColor="?attr/colorSurfaceDim">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tip_detail_comment_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/tip_detail_send_comment_btn"
+                    style="@style/BlackIconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="Send"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    app:icon="@drawable/send_48px" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tip_detail_comment_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="200dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

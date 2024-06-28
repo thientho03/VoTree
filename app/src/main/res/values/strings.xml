@@ -1,0 +1,177 @@
+<resources>
+    <string name="app_name">VoTree</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tips_fragment">Tips Fragment</string>
+    <string name="ads_fragment">Ads Fragment</string>
+
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="search">Search</string>
+    <string name="more">More</string>
+    <string name="tips">Tips</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="first_image_of_tip">First Image of Tip</string>
+    <string name="this_is_icon_for_illustration">This is icon for illustration</string>
+    <string name="tip_name">Celebrating The First Day of Spring With These Flowers</string>
+    <string name="status">PENDING</string>
+    <string name="user_name">Kha Huynh</string>
+    <string name="store_name">BA_10 Store</string>
+    <string name="upvotes_placeholder">%d upvotes</string>
+    <string name="date_of_tip">Jan 1, 2021</string>
+    <string name="reject">Reject</string>
+    <string name="approve">Approve</string>
+    <string name="votree_logo">VoTree Logo</string>
+    <string name="nav_tips">Tips</string>
+    <string name="nav_accounts">Accounts</string>
+    <string name="nav_promotions">Promotions</string>
+    <string name="nav_reports">Reports</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="product_name">Product Name</string>
+    <string name="short_description">Short Description</string>
+    <string name="long_description">Description</string>
+
+    <string name="price_format">%.2f</string>
+    <string name="quantity_format">x%d</string>
+
+    <string-array name="plant_types">
+        <item>FLOWERING_PLANTS</item>
+        <item>TREES</item>
+        <item>SHRUBS</item>
+        <item>FERNS</item>
+        <item>MOSSES</item>
+        <item>GRASSES</item>
+        <item>SUCCULENTS</item>
+        <item>CACTI</item>
+        <item>VINES</item>
+        <item>AQUATIC_PLANTS</item>
+        <item>BULBS</item>
+        <item>PALMS</item>
+        <item>CONIFERS</item>
+        <item>HERBS</item>
+        <item>PERENNIALS</item>
+        <item>UNKNOWN</item>
+    </string-array>
+
+    <string-array name="suit_climate">
+        <item>TROPICAL</item>
+        <item>TEMPERATE</item>
+        <item>ARID</item>
+        <item>SEMI_ARID</item>
+        <item>MEDITERRANEAN</item>
+        <item>SUBTROPICAL</item>
+        <item>POLAR</item>
+        <item>ALPINE</item>
+        <item>DESERT</item>
+        <item>MARITIME</item>
+        <item>CONTINENTAL</item>
+        <item>HUMID_SUBTROPICAL</item>
+        <item>HUMID_CONTINENTAL</item>
+        <item>MONSOONAL</item>
+        <item>OCEANIC</item>
+        <item>STEPPE</item>
+        <item>UNKNOWN</item>
+    </string-array>
+
+    <string-array name="suit_environment">
+        <item>INDOOR</item>
+        <item>OUTDOOR</item>
+        <item>SHADE</item>
+        <item>SUN</item>
+        <item>WATER</item>
+        <item>DRY</item>
+        <item>HUMID</item>
+        <item>WET</item>
+        <item>AQUATIC</item>
+        <item>TERRESTRIAL</item>
+        <item>SEMI_AQUATIC</item>
+        <item>ARID</item>
+        <item>MOUNTAINOUS</item>
+        <item>TROPICAL</item>
+        <item>TEMPERATE</item>
+        <item>SUBTROPICAL</item>
+        <item>ALPINE</item>
+        <item>MARITIME</item>
+        <item>DESERT</item>
+        <item>UNKNOWN</item>
+    </string-array>
+
+    <string name="default_web_client_id">488648588931-8ch1qldukqfju8gj8846k8p8ckshmjf7.apps.googleusercontent.com</string>
+
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="label_recipent_name">Recipent Name</string>
+    <string name="label_recipent_phone_number">Phone Number</string>
+    <string name="user_role">USER</string>
+    <string name="title_user_name">User Name:</string>
+    <string name="title_gender">Gender:</string>
+    <string name="title_phone_number">Phone Number:</string>
+    <string name="title_email">Email:</string>
+    <string name="title_address">Address:</string>
+    <string name="title_accumulate_point">Accumulate Point:</string>
+    <string name="title_created_date">Created Date:</string>
+    <string name="title_updated_date">Updated Date:</string>
+    <string name="link_text">Transaction List</string>
+    <string name="reported_by">Reported by: %s</string>
+    <string name="being_reported">Being reported: %s</string>
+    <string name="by_user">By</string>
+    <string name="reported_date">Reported date: %s</string>
+    <string name="log_out">Log out</string>
+    <string name="strikethrough_text_html"> <strike>đ100.000 </strike> </string>
+    <string name="order_history">Order History</string>
+    <string name="order_management">Order Management</string>
+    <string name="product_review">Product Review</string>
+    <string name="add_new_product">Add New Product</string>
+    <string name="cart">Your Cart</string>
+    <string name="user_profile_setting">User Profile</string>
+    <string name="order_details">Order Details</string>
+    <string name="product_reviews">Product Review</string>
+    <string name="update_product">Update Product</string>
+    <string-array name="tips_report_reasons">
+        <item>Spam</item>
+        <item>Offensive</item>
+        <item>Irrelevant</item>
+        <item>Other</item>
+    </string-array>
+</resources>

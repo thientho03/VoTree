@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tip_list_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="16dp"
+    android:orientation="horizontal">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        app:shapeAppearanceOverlay="@style/rounded_overlay"
+        android:id="@+id/tip_list_item_image"
+        android:scaleType="centerCrop"
+        android:layout_width="96dp"
+        android:layout_height="79dp"
+        tools:srcCompat="@tools:sample/avatars" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        style="?attr/textAppearanceLabelSmall"
+        android:id="@+id/tip_list_item_date_vote"
+        android:layout_marginStart="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mar 28 2024 - 100 upvotes"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="?attr/textAppearanceTitleMedium"
+        android:id="@+id/tip_list_item_title"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Celebrating The First Day of Spring With These Flowers" />
+
+</LinearLayout>
+</LinearLayout>

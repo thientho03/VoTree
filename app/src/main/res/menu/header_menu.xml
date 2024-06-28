@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/nav_tips"
+        android:icon="@drawable/baseline_tips_and_updates_24"
+        android:textSize="30sp"/>
+
+    <item
+        android:id="@+id/nav_accounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/nav_accounts"
+        android:icon="@drawable/baseline_account_circle_24"/>
+
+    <item
+        android:id="@+id/nav_reports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/nav_reports"
+        android:icon="@drawable/baseline_report_24"/>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/log_out"
+        android:icon="@drawable/baseline_logout_24"/>
+</menu>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">-->
+    <!--        <item name="colorAccent">@color/mainColor</item>-->
+    <!--    </style>-->
+
+    <style name="ThemeOverlay.AppCompat.Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/mainColor</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DialogButtonStyled</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/DialogButtonStyled</item>
+    </style>
+
+    <style name="DialogButtonStyled" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/blu500_dark</item>
+    </style>
+
+<!--    Change color of tooltip-->
+    <style name="Myslider" parent="@style/Widget.MaterialComponents.Slider">
+        <item name="labelStyle">@style/SliderToolTip</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+    <style name="SliderToolTip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="android:textColor">@color/md_theme_primary</item>
+        <item name="android:background">@color/white</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:paddingStart">14.5dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="Widget.App.Button.OutlinedButton.DownvoteButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="backgroundTint">@drawable/downvote_color</item>
+        <item name="android:textColor">@drawable/vote_text_color</item>
+        <item name="iconTint">@drawable/vote_text_color</item>
+    </style>
+    <style name="Widget.App.Button.OutlinedButton.UpvoteButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="backgroundTint">@drawable/upvote_color</item>
+        <item name="android:textColor">@drawable/vote_text_color</item>
+        <item name="iconTint">@drawable/vote_text_color</item>
+    </style>
+
+
+    <style name="circle_overlay">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="square_overlay">
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="rounded_overlay">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="BlackIconButton" parent="Widget.Material3.Button.IconButton">
+        <item name="iconTint">@color/black</item>
+    </style>
+
+</resources>

@@ -1,0 +1,16 @@
+<!-- button_stroke.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Background color (transparent) -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- Stroke -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/md_theme_primary" />
+
+    <!-- CornerRadius -->
+    <corners android:radius="5dp" /> <!-- Adjust corner radius as needed -->
+
+</shape>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES"
+        android:minSdkVersion="33" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_VIDEO"
+        android:minSdkVersion="33" />
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_AUDIO"
+        android:minSdkVersion="33" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".PurchaseActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".users.activities.ChatActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".users.activities.MessageActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".users.activities.OrderManagementForStoreActivity"
+            android:exported="false" />
+
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/gma_ad_services_config"
+            tools:replace="android:resource" />
+
+        <activity
+            android:name=".products.adapters.PointTransactionAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".users.fragments.StoreProfile2"
+            android:exported="false" />
+        <activity
+            android:name=".notifications.adapters.NotificationAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".products.adapters.SuggestionSearchAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".tips.TipReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".products.adapters.UserReviewAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".products.activities.ProductReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.adapters.OrderItemAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.OrderHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".admin.activities.AdminMainActivity" />
+        <activity
+            android:name=".users.activities.AddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.RegisterToSeller"
+            android:exported="false" />
+        <activity
+            android:name=".tips.TipDetailActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".tips.WriteTipActivity" />
+        <activity
+            android:name=".users.activities.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".users.activities.SignUpActivity"
+            android:exported="false" /> <!-- <meta-data -->
+        <!-- android:name="com.facebook.sdk.ApplicationId" -->
+        <!-- android:value="@string/facebook_app_id" /> -->
+        <!-- <meta-data -->
+        <!-- android:name="com.facebook.sdk.ClientToken" -->
+        <!-- android:value="@string/facebook_client_token" /> -->
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".products.activities.CheckoutActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".users.activities.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+    </application>
+
+</manifest>
